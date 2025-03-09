@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 255 100% 2.9%;
+    --foreground: 0 0% 98%;
+
+    --card: 255 100% 3.9%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 255 100% 2.9%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 0 72.2% 50.6%;
+    --primary-foreground: 0 85.7% 97.3%;
+
+    --secondary: 255 100% 9.9%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 255 100% 9.9%;
+    --muted-foreground: 0 0% 63.9%;
+
+    --accent: 255 100% 9.9%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 255 100% 14.9%;
+    --input: 255 100% 14.9%;
+    --ring: 0 72.2% 50.6%;
+
+    --sidebar: 255 100% 5.9%;
+    --sidebar-foreground: 0 0% 98%;
+  }
+}
+
+@layer base {
+  body {
+    @apply bg-background text-foreground;
+    background-color: #0a0028;
+  }
+}
+
+@layer components {
+  .bg-game-overlay {
+    position: relative;
+  }
+
+  .bg-game-overlay::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background-image: url("https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-1RVQlPAxQU5eLE7fhqAg4DhcVmkQS6.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.15;
+    pointer-events: none;
+    z-index: -1;
+  }
+
+  .card-overlay {
+    background-color: rgba(10, 0, 40, 0.7);
+    backdrop-filter: blur(2px);
+  }
+}
+
